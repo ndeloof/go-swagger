@@ -22,10 +22,11 @@ import (
 )
 
 type operationOptions struct {
-	Operations []string `long:"operation" short:"O" description:"specify an operation to include, repeat for multiple (defaults to all)"`
-	Tags       []string `long:"tags" description:"the tags to include, if not specified defaults to all" group:"operations"`
-	APIPackage string   `long:"api-package" short:"a" description:"the package to save the operations" default:"operations"`
-	WithEnumCI bool     `long:"with-enum-ci" description:"allow case-insensitive enumerations"`
+	Operations  []string `long:"operation" short:"O" description:"specify an operation to include, repeat for multiple (defaults to all)"`
+	Tags        []string `long:"tags" description:"the tags to include, if not specified defaults to all" group:"operations"`
+	APIPackage  string   `long:"api-package" short:"a" description:"the package to save the operations" default:"operations"`
+	WithEnumCI  bool     `long:"with-enum-ci" description:"allow case-insensitive enumerations"`
+	NoValidator bool     `long:"skip-validator" description:"when present will not generate the validator"`
 
 	// tags handling
 	SkipTagPackages bool `long:"skip-tag-packages" description:"skips the generation of tag-based operation packages, resulting in a flat generation"`

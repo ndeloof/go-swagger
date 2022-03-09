@@ -56,6 +56,7 @@ type Model struct {
 	WithModels
 
 	NoStruct              bool     `long:"skip-struct" description:"when present will not generate the model struct" hidden:"deprecated"`
+	NoValidator           bool     `long:"skip-validator" description:"when present will not generate the validator"`
 	Name                  []string `long:"name" short:"n" description:"the model to generate, repeat for multiple (defaults to all). Same as --models"`
 	AcceptDefinitionsOnly bool     `long:"accept-definitions-only" description:"accepts a partial swagger spec wih only the definitions key"`
 }
